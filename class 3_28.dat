@@ -1,0 +1,42 @@
+#3/28  
+#Baisc of r programming
+#loop variable 'in' vector '벡터길이만큼 반복
+# j'th(j번째) iteration 
+#hw make examples -. 
+#a=matrix(0,10,10) for (i in 1:10) {for (j in 1:10) {v<-i+j if(v>4)break a[i,j]<-v}} >>i=10 
+#a=matrix(0,10,10) for (i in 1:10) {for (j in 1:10) {v<-i+j if(v>4)break a[i,j]<-v}} >>i=1
+#next = pass ? 
+#function = bunch of code 코드를 하나의 이름으로 불러온다
+#testFunction 실행할려면 testFunction() 
+#p16 y값이 function 안에 없어도 함수 밖에서 찾음 ㅜㅜ
+#column average function v[i]=mean(x[,i])로 고침 
+x=1
+y <-class(x)
+str(y) >> chr "numeric"
+y == "character"
+#file 
+#p21 "C:/Users/Jeon/Dropbox/class/2018 EDA/week_4/doc_code" 절대경로
+getwd() #[1] "C:/Users/uos/Documents"
+setwd('')#change current path
+#read table "CO2.dat">>path or file name, header=true >>header가 있다.
+#class(A$Plant) >> A는 data frame
+class(wine)#[3] "data.frame"
+str(wine)
+#choose column 1
+wine[,1] #or
+wine$X1 
+#wine file->my harddriver
+?write.table
+head(wine) 
+cat("a")
+cat("a a a")
+
+cat("a a \n a")#\n == enter
+write.table(wine, "./CO2.dat",sep=" ")# exact path 없어도 됨.
+#read xlsx file have to install the package 
+install.packages("xlsx")
+library(xlsx)
+A = read.xlsx("CO2.xlsx", header = TRUE, sheetIndex = 1, stringsAsFactors= FALSE)
+#review 1.creation 2.how to choose an elements in object ex([],$) 3. casting 
+#r-graphics
+#plotting points
